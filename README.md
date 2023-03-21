@@ -1,2 +1,3 @@
-# Dio-github
-O GitHub é uma plataforma de hospedagem de código-fonte e colaboração em desenvolvimento de software. Permite aos usuários armazenar e controlar versões de seus projetos
+# Dio
+Este repositório de projetos é um local centralizado para armazenar, gerenciar e controlar versões de software do bootcamp Potência Tech Angular Developer - Powered by iFood. Para permitir que como desenvolvedor eu possa colaborar, gerenciar e compartilhar meus projetos de forma eficiente.
+
