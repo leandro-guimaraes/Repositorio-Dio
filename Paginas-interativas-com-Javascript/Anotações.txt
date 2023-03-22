@@ -1,0 +1,6 @@
+JavaScript é uma linguagem de programação interpretada, utilizada principalmente para criar páginas web interativas e dinâmicas. 
+Foi criada em 1995 e é uma das principais tecnologias utilizadas para o desenvolvimento front-end.
+Algumas características da linguagem incluem tipagem dinâmica, orientação a objetos, funções de primeira classe, manipulação de eventos e suporte a AJAX.
+Com JavaScript, é possível criar animações, manipular elementos HTML, realizar validações de formulários, enviar requisições para servidores e criar jogos.
+Algumas das principais bibliotecas e frameworks em JavaScript incluem o jQuery, React, Angular e Vue.js.
+ Além disso, JavaScript também é utilizado em ambientes de servidor com o Node.js.
