@@ -31,7 +31,7 @@ x += 5; // x é 15
 x -= 5; // x é 10 novamente
 x *= 2; // x é 20
 x /= 2; // x é 10 novamente
-x %= 3; // x é 1
+x %= 3; // x é 1  resto da divisão
 
 /*
 Operadores de Comparação:

@@ -1,4 +1,4 @@
-  /*
+/*
 Fazer um programa que calcule o valor gasto de combustivel em uma viagem.
 
 Onde terei 3 variaveis. Sendo elas:
@@ -7,12 +7,23 @@ Onde terei 3 variaveis. Sendo elas:
 3- Distância em KM da viagem;
 
 */
-
-let precoCombustivel = 5.79;
+let precoEtanol = 4.60;
+let precoGasolina = 5.90;
 const kmPorLitro = 10;
 let distanciaEmKm = 100;
+let tipoCombustivel = 'Gasolina';
+
 
 let litrosConsumidos = distanciaEmKm / kmPorLitro;
-let valorGasto = litrosConsumidos * precoCombustivel;
 
-console.log(valorGasto.toFixed(2));
+if (tipoCombustivel === 'Etanol') {
+
+  let valorGasto = litrosConsumidos * precoEtanol;
+  console.log(valorGasto.toFixed(2));
+
+} else {
+
+  let valorGasto = litrosConsumidos * precoGasolina;
+  console.log(valorGasto.toFixed(2));
+
+}
