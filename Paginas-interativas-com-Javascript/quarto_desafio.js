@@ -5,7 +5,7 @@ Utilize os codigos da tabela a seguir para ler qual a condição de pagamento es
 adequado.
 
 
-Código ondição de pagamento:
+Código condição de pagamento:
 - À vista débito, recebe 10% de desconto;
 - À vista  no dinheiro ou pix, recebe 15% de desconto;
 - Em duas vezes, preço normal de etiqueta sem juros;
