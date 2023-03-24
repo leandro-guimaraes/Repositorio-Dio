@@ -6,9 +6,22 @@ adequado.
 
 
 Código condição de pagamento:
-- À vista débito, recebe 10% de desconto;
-- À vista  no dinheiro ou pix, recebe 15% de desconto;
-- Em duas vezes, preço normal de etiqueta sem juros;
-- Acima de duas vezes, preço normal de etiqueta mais juros de 10%
+1 - À vista débito, recebe 10% de desconto;
+2 - À vista  no dinheiro ou pix, recebe 15% de desconto;
+3 - Em duas vezes, preço normal de etiqueta sem juros;
+4 - Acima de duas vezes, preço normal de etiqueta mais juros de 10%
 
 */
+
+let precoetiqueta = 100;
+let formaDePagamento = 4;
+
+if(formaDePagamento === 1) {
+    console.log(precoetiqueta -(precoetiqueta *  0.1));
+}else if(formaDePagamento === 2) {
+    console.log(precoetiqueta -(precoetiqueta *  0.15));
+}else if(formaDePagamento === 3) {
+    console.log(precoetiqueta);
+}else {
+    console.log(precoetiqueta + (precoetiqueta *  0.1));
+}
