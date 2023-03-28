@@ -3,10 +3,12 @@ class Pessoa{
 
     nome;
     idade;
+    anoDeNascimento;
 
-    constructor(){
-        this.nome = 'teste';
-        this.idade = 2;
+    constructor(nome, idade){
+        this.nome = nome;
+        this.idade = idade;
+        this.anoDeNascimento = 2023 - this.idade;
     }
 
     descrever(){
@@ -27,8 +29,7 @@ Dilsinho.idade = 2;
 Leandro.descrever();
 */
 
-const Leandro = new Pessoa();
-const Dilsinnho = new Pessoa();
+const Leandro = new Pessoa('Leandro',32);
+const Dilsinnho = new Pessoa('Dilsinho',2);
 
-Leandro.descrever();
-Dilsinnho.descrever();
+console.log(Leandro);
