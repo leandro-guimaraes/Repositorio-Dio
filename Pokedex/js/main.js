@@ -41,15 +41,36 @@ Esta linha seleciona o elemento do HTML com o ID 'pokemonList' e o armazena na v
 const pokemonList = document.getElementById('pokemonList')
 
 /*
-Esta é a parte principal do código.
- Ele usa a função getPokemons() do objeto pokeApi para obter uma lista de objetos Pokémon.
- Em seguida, ele chama o método map na lista de Pokémon para chamar a função convertPokemonToLi 
- para cada um e criar uma lista de strings HTML correspondentes. Finalmente, ele usa o método join para unir todas as strings
- em uma única string HTML e insere essa string como o conteúdo do elemento pokemonList usando a propriedade innerHTML.
+Este é o início do código, onde a função getPokemons é chamada no objeto pokeApi para 
+obter uma lista de todos os Pokémons disponíveis na API.
+O método .then() é usado para lidar com a resposta da API, 
+que é um array de objetos Pokémon.
+##########
+pokeApi.getPokemons().then((pokemons = []) => {
+##########
+
+
+Esta linha de código cria uma nova variável chamada newHtml, que é definida como uma lista HTML de todos os Pokémons usando
+a função convertPokemonToLi para converter cada objeto Pokémon em uma string HTML. A função map() 
+é usada para percorrer o array de Pokémons e aplicar a função convertPokemonToLi em cada um, 
+retornando um novo array de strings HTML.
+Em seguida, o método join() é usado para unir todas as strings HTML em uma única string.
+##########
+const newHtml = pokemons.map(convertPokemonToLi).join('')
+##########
+
+
+Finalmente, a lista HTML de todos os Pokémons é adicionada ao elemento HTML com o ID pokemonList definido no documento. 
+A propriedade innerHTML é usada para definir o conteúdo do elemento como a lista HTML criada anteriormente.
+
+##########
+pokemonList.innerHTML = newHtml
+##########
 
  */
 pokeApi.getPokemons().then((pokemons = []) => {
-    pokemonList.innerHTML += pokemons.map(convertPokemonToLi).join('')
+    const newHtml = pokemons.map(convertPokemonToLi).join('')
+    pokemonList.innerHTML = newHtml
 })
 
     
