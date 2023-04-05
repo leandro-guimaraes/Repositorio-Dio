@@ -1,15 +1,25 @@
 /*
-const offset = 0
-const limit = 10
-*/
-const url = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=10'
+######################## SOBRE O DODIGO ###########################
+Este código busca uma lista de Pokémon da API e os exibe em uma lista HTML no navegador, 
+usando a função 'convertPokemonToLi'  para converter cada Pokémon em HTML.
 
+*/
+
+/* 
+Esta é a declaração da função 'convertPokemonToLi', que recebe um objeto pokemon como parâmetro. 
+Esta função é responsável por converter as informações desse objeto em uma string HTML. 
+*/
 function convertPokemonToLi(pokemon){
+    /*
+    Este é o template de string que contém a estrutura HTML que será criada para cada Pokémon.
+     Ele usa a interpolação de string ${} para inserir o nome do Pokémon dentro do elemento span com a classe name,
+     e também no atributo alt da imagem.
+    */
     return `
     
     <li class="pokemon">
         <span class="number">#001</span>
-        <span class="name">${pokemon.name}</span>
+            <span class="name">${pokemon.name}</span>
 
         <div class="detail">
             <ol class="types">
@@ -23,29 +33,21 @@ function convertPokemonToLi(pokemon){
 `
     
 }
-
-
-
-
+/*
+Esta linha seleciona o elemento do HTML com o ID 'pokemonList' e o armazena na variável 'pokemonList'.
+*/
 const pokemonList = document.getElementById('pokemonList')
 
+/*
+Esta é a parte principal do código.
+ Ele usa a função getPokemons() do objeto pokeApi para obter uma lista de objetos Pokémon.
+ Em seguida, ele chama o método map na lista de Pokémon para chamar a função convertPokemonToLi 
+ para cada um e criar uma lista de strings HTML correspondentes. Finalmente, ele usa o método join para unir todas as strings
+ em uma única string HTML e insere essa string como o conteúdo do elemento pokemonList usando a propriedade innerHTML.
 
-//codigo de consumo de api.
-fetch(url)
-    // Encadeamento de thens.
-    //Foram utilizadas  funções de callback  que é uma função passada a outra função como argumento, que é então invocado dentro da função externa para completar algum tipo de rotina ou ação.
-    // Foram utilizadas arrow functions.
-    //.then((response) => response.json())         estou transformando response em uma promessa do body convertido em json.
-    //.then((jsonBody) =>console.log(jsonBody))    estou recebendo o body convertido e printando ele.
-    //.catch((error) => console.error(error))
+ */
+pokeApi.getPokemons().then((pokemons = []) => {
+    pokemonList.innerHTML += pokemons.map(convertPokemonToLi).join('')
+})
 
-    .then((response) => response.json())
-    .then((jsonBody) => jsonBody.results)
-    .then((pokemons) => {
-        for(let i=0; i < pokemons.length; i++){
-            const pokemon = pokemons[i];
-            pokemonList.innerHTML += convertPokemonToLi(pokemon)
-        }
     
-    })
-    .catch((error) => console.error(error))
