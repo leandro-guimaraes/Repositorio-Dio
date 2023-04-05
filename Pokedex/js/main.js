@@ -3,9 +3,11 @@
 Este código busca uma lista de Pokémon da API e os exibe em uma lista HTML no navegador, 
 usando a função 'convertPokemonToLi'  para converter cada Pokémon em HTML.
 
-*/
+###################################################################
 
-/* 
+
+
+
 Esta é a declaração da função 'convertPokemonToLi', que recebe um objeto pokemon como parâmetro. 
 Esta função é responsável por converter as informações desse objeto em uma string HTML. 
 */
