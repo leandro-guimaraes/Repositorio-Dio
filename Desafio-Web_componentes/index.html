@@ -8,25 +8,32 @@
     <title>Portal de Noticías Galatica</title>
     <link rel="stylesheet" href="styles.css/card.css">
     <script src="src/components/CardNews.js" defer></script>
-    <script src="src/components/TituloDinamico.js"></script>
+    <script src="src/components/TituloDinamico.js" defer></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="card">
-            <div class="card__left">
-                <span>By Leandro Guimarães</span>
-                <a href="https://github.com/leandro-guimaraes">Desenvolvedor</a>
-                <p>programador C#/Javascript/Nodejs/Html e Css.</p>
-            </div>
-            <div class="card__right">
-                <img src="assets/Foto de perfil para Instagram circulo pintura colorido.png" alt="">
-            </div>
-        </div>
-    </div>
+    <div class="app-root">
 
-    <card-news></card-news>
-    <titulo-dinamico ></titulo-dinamico>
+        <card-news autor="Leo" title="Programador fullstack" link-url="www.google.com"
+            photo="assets/Foto de perfil para Instagram circulo pintura colorido.png"
+            content="Desenvolvedor front e back">
+        </card-news>
+
+        <card-news autor="Leo" title="Programador fullstack" link-url="www.google.com"
+            photo="assets/Foto de perfil para Instagram circulo pintura colorido.png"
+            content="Desenvolvedor front e back">
+        </card-news>
+
+        <card-news autor="Leo" title="Programador fullstack" link-url="www.google.com"
+            photo="assets/Foto de perfil para Instagram circulo pintura colorido.png"
+            content="Desenvolvedor front e back">
+        </card-news>
+
+        <card-news autor="Leo" title="Programador fullstack" link-url="www.google.com"
+            photo="assets/Foto de perfil para Instagram circulo pintura colorido.png"
+            content="Desenvolvedor front e back">
+        </card-news>
+
 </body>
 
 </html>

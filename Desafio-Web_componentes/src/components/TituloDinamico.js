@@ -18,11 +18,8 @@ class TituloDinamico extends HTMLElement {
         //enviar para a shadow
         shadow.appendChild(componentRoot);
         shadow.appendChild(style);
-
-
-
-
     }
+    
 }
 
 customElements.define("titulo-dinamico", TituloDinamico);
